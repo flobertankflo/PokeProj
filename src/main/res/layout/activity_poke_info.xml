@@ -26,7 +26,7 @@
             app:srcCompat="@drawable/baseline_arrow_back_24" /-->
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/Title"
             android:layout_width="371dp"
             android:layout_height="match_parent"
             android:gravity="left|center"
@@ -54,17 +54,18 @@
             app:srcCompat="@mipmap/ic_launcher_foreground" /-->
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/Pokename"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bulibizarre"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="Bulibizarre" />
+
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/PokeId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="# 001"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:text="# 001" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,308 +73,301 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/PokeSize"
                 android:layout_width="133dp"
                 android:layout_height="75dp"
                 android:gravity="center"
                 android:text="0.7 m" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/PokeType"
                 android:layout_width="167dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Plante / Poison" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/PokeWeight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="6.9 Kg" />
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="TextView" />
-
         </LinearLayout>
 
         <View
             android:layout_width="385dp"
             android:layout_height="3dp"
-            android:background="#999999"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:background="#999999" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/PokeShortDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bulbizarre, le Pokémon GRAINE."
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:text="Bulbizarre, le Pokémon GRAINE." />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/PokeLongDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BULBIZARRE passe son temps à faire la sieste sous le soleil. Il y a une graine sur son dos. Il absorbe les rayons du soleil pour faire doucement pousser la graine."
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginTop="15dp"
+            android:text="BULBIZARRE passe son temps à faire la sieste sous le soleil. Il y a une graine sur son dos. Il absorbe les rayons du soleil pour faire doucement pousser la graine." />
 
         <View
             android:layout_width="385dp"
             android:layout_height="3dp"
-            android:background="#999999"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="25dp"/>
+            android:layout_marginTop="25dp"
+            android:background="#999999" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="23dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
 
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="179dp"
                 android:layout_height="wrap_content"
-                android:gravity="left|bottom"
                 android:layout_marginLeft="20dp"
+                android:gravity="left|bottom"
                 android:text="PV" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/StatPv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
                 android:gravity="right|bottom"
-                android:layout_marginRight="20dp"
                 android:text="45" />
         </LinearLayout>
 
         <ProgressBar
-            android:id="@+id/progressBar1"
+            android:id="@+id/BarPV"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="13dp"
-            android:progress="45"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:progress="45" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="23dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
 
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView15"
                 android:layout_width="179dp"
                 android:layout_height="wrap_content"
-                android:gravity="left|bottom"
                 android:layout_marginLeft="20dp"
+                android:gravity="left|bottom"
                 android:text="Attaque" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/StatAttaque"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
                 android:gravity="right|bottom"
-                android:layout_marginRight="20dp"
                 android:text="45" />
         </LinearLayout>
 
         <ProgressBar
-            android:id="@+id/progressBar2"
+            android:id="@+id/barAttaque"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="13dp"
-            android:progress="45"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:progress="45" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="23dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
 
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="179dp"
                 android:layout_height="wrap_content"
-                android:gravity="left|bottom"
                 android:layout_marginLeft="20dp"
+                android:gravity="left|bottom"
                 android:text="Défense" />
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/StatDefense"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
                 android:gravity="right|bottom"
-                android:layout_marginRight="20dp"
                 android:text="45" />
         </LinearLayout>
 
         <ProgressBar
-            android:id="@+id/progressBar3"
+            android:id="@+id/BarDefense"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="13dp"
-            android:progress="45"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:progress="45" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="23dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
 
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView19"
                 android:layout_width="179dp"
                 android:layout_height="wrap_content"
-                android:gravity="left|bottom"
                 android:layout_marginLeft="20dp"
+                android:gravity="left|bottom"
                 android:text="Attaque Spéciale" />
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/StatAttaqueSpe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
                 android:gravity="right|bottom"
-                android:layout_marginRight="20dp"
                 android:text="45" />
         </LinearLayout>
 
         <ProgressBar
-            android:id="@+id/progressBar4"
+            android:id="@+id/BarAttaqueSpe"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="13dp"
-            android:progress="45"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:progress="45" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="23dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
 
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView21"
                 android:layout_width="179dp"
                 android:layout_height="wrap_content"
-                android:gravity="left|bottom"
                 android:layout_marginLeft="20dp"
+                android:gravity="left|bottom"
                 android:text="Défense Spéciale" />
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/StatDefenseSpe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
                 android:gravity="right|bottom"
-                android:layout_marginRight="20dp"
                 android:text="45" />
         </LinearLayout>
 
         <ProgressBar
-            android:id="@+id/progressBar5"
+            android:id="@+id/barDefenseSpe"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="13dp"
-            android:progress="45"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:progress="45" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="23dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
 
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView23"
                 android:layout_width="179dp"
                 android:layout_height="wrap_content"
-                android:gravity="left|bottom"
                 android:layout_marginLeft="20dp"
+                android:gravity="left|bottom"
                 android:text="Vitesse" />
 
             <TextView
-                android:id="@+id/textView24"
+                android:id="@+id/StatVitesse"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
                 android:gravity="right|bottom"
-                android:layout_marginRight="20dp"
                 android:text="45" />
         </LinearLayout>
 
         <ProgressBar
-            android:id="@+id/progressBar6"
+            android:id="@+id/BarVitesse"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="13dp"
-            android:progress="45"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:progress="45" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="23dp"
-            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
 
-            android:layout_marginTop="10dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView25"
                 android:layout_width="179dp"
                 android:layout_height="wrap_content"
-                android:gravity="left|bottom"
                 android:layout_marginLeft="20dp"
+                android:gravity="left|bottom"
                 android:text="Total" />
 
             <TextView
-                android:id="@+id/textView26"
+                android:id="@+id/StatTotal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
                 android:layout_weight="1"
                 android:gravity="right|bottom"
-                android:layout_marginRight="20dp"
                 android:text="45" />
         </LinearLayout>
 
         <ProgressBar
-            android:id="@+id/progressBar7"
+            android:id="@+id/BarTotal"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="13dp"
-            android:progress="45"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:progress="45" />
 
         <View
             android:layout_width="385dp"
             android:layout_height="3dp"
-            android:background="#999999"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:background="#999999" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

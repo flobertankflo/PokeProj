@@ -1,12 +1,16 @@
 package com.example.testapi
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.lifecycleScope
+import com.example.pokeproj.MainActivity
+import com.example.pokeproj.PokeInfo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.http.GET
 import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import kotlinx.coroutines.launch
 import retrofit2.Response
 import retrofit2.converter.moshi.MoshiConverterFactory
 
@@ -39,4 +43,31 @@ data class Type(
 interface PokebuildApi {
     @GET("api/v1/pokemon")
     suspend fun getPokemons(): Response<List<Pokemon>>
+}
+fun getAllPokemon(Activity : LifecycleOwner, Handler: PokemonHandler){
+    val moshi = Moshi.Builder()
+        .add(KotlinJsonAdapterFactory())
+        .build()
+
+    val retrofit = Retrofit.Builder()
+        .baseUrl("https://pokebuildapi.fr/")
+        .addConverterFactory(MoshiConverterFactory.create(moshi))
+        .build()
+
+    val apiService = retrofit.create(PokebuildApi::class.java)
+
+    Activity.lifecycleScope.launch(Dispatchers.IO) {
+        val response = apiService.getPokemons()
+        if (response.isSuccessful) {
+            val pokemons = response.body()
+            if (pokemons != null) {
+                Handler.handlePokemons(pokemons)
+            }
+        } else {
+            // handle error
+        }
+    }
+}
+interface PokemonHandler {
+    suspend fun handlePokemons(pokemons: List<Pokemon>)
 }
